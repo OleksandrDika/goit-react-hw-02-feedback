@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ goodFeedback, neutralFeedback, badFeedback }) => (
   <div>
@@ -9,3 +10,9 @@ const FeedbackOptions = ({ goodFeedback, neutralFeedback, badFeedback }) => (
 );
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+  goodFeedback: PropTypes.func.isRequired,
+  neutralFeedback: PropTypes.func.isRequired,
+  badFeedback: PropTypes.func.isRequired,
+};
