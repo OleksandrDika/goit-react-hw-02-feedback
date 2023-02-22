@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Conteiner } from './Section.styled';
 
 const Section = ({ title, children }) => (
   <div>
-    <main style={{ padding: 30 }}>
+    <Conteiner>
       <h1>{title}</h1>
       {children}
-    </main>
+    </Conteiner>
   </div>
 );
 export default Section;

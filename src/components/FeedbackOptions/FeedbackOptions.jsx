@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Buttonbox } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ goodFeedback, neutralFeedback, badFeedback }) => (
-  <div style={{ display: 'flex', gap: 15 }}>
+  <Buttonbox>
     <button onClick={goodFeedback}>Good</button>
     <button onClick={neutralFeedback}>Neutral</button>
     <button onClick={badFeedback}>Bad</button>
-  </div>
+  </Buttonbox>
 );
 
 export default FeedbackOptions;
