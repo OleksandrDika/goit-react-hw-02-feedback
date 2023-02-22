@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <div>
     <h2>Statistic</h2>
-    {total && (
+    {total ? (
       <div>
         <p>Good:{good}</p>
         <p>Neutral:{neutral}</p>
@@ -15,6 +15,8 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
           {positivePercentage ? Math.round(positivePercentage) : 0}%
         </p>
       </div>
+    ) : (
+      'There is no feedback'
     )}
   </div>
 );

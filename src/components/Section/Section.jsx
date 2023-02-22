@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Section = ({ title, children }) => (
   <div>
-    <main>
+    <main style={{ padding: 30 }}>
       <h1>{title}</h1>
       {children}
     </main>
