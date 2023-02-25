@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Notification } from 'components/Notification/Notification';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <div>
@@ -16,7 +17,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
         </p>
       </div>
     ) : (
-      'There is no feedback'
+      <Notification message={'There is no feedback'} />
     )}
   </div>
 );

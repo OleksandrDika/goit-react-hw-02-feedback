@@ -31,6 +31,15 @@ export class App extends Component {
     });
   };
 
+  // onLeaveFeedback = e => {
+  //   const teg = e.currentTarget.name;
+  //   this.setState(prevState => {
+  //     return {
+  //       [teg]: prevState.teg + 1,
+  //     };
+  //   });
+  // };
+
   // countPositiveFeedbackPercentage()
 
   render() {
@@ -48,6 +57,8 @@ export class App extends Component {
           goodFeedback={this.goodFeedback}
           neutralFeedback={this.neutralFeedback}
           badFeedback={this.badFeedback}
+          // onLeaveFeedback={this.onLeaveFeedback}
+          options={['good', 'neutral', 'bad']}
         />
 
         <Statistics

@@ -2,11 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Buttonbox } from './FeedbackOptions.styled';
 
-const FeedbackOptions = ({ goodFeedback, neutralFeedback, badFeedback }) => (
+const FeedbackOptions = ({
+  goodFeedback,
+  neutralFeedback,
+  badFeedback,
+  options,
+  // onLeaveFeedback,
+}) => (
   <Buttonbox>
-    <button onClick={goodFeedback}>Good</button>
-    <button onClick={neutralFeedback}>Neutral</button>
-    <button onClick={badFeedback}>Bad</button>
+    <button onClick={goodFeedback} name="good">
+      Good
+    </button>
+    <button onClick={neutralFeedback} name="neutral">
+      Neutral
+    </button>
+    <button onClick={badFeedback} name="bed">
+      Bad
+    </button>
   </Buttonbox>
 );
 
