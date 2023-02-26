@@ -1,31 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Buttonbox } from './FeedbackOptions.styled';
+import { nanoid } from 'nanoid';
 
-const FeedbackOptions = ({
-  goodFeedback,
-  neutralFeedback,
-  badFeedback,
-  options,
-  // onLeaveFeedback,
-}) => (
+const FeedbackOptions = ({ onLeaveFeedback, options }) => (
   <Buttonbox>
-    <button onClick={goodFeedback} name="good">
-      Good
-    </button>
-    <button onClick={neutralFeedback} name="neutral">
-      Neutral
-    </button>
-    <button onClick={badFeedback} name="bed">
-      Bad
-    </button>
+    {options.map(item => {
+      return (
+        <button onClick={onLeaveFeedback} name={item} key={nanoid()}>
+          {item}
+        </button>
+      );
+    })}
   </Buttonbox>
 );
 
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  goodFeedback: PropTypes.func.isRequired,
-  neutralFeedback: PropTypes.func.isRequired,
-  badFeedback: PropTypes.func.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.array.isRequired,
 };
